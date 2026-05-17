@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BCS601 Project</title>
+</head>
+<body>
+
+    <h1>Cloud Computing Mini Project</h1>
+
+    <form method="POST">
+
+        <label>First Number:</label>
+        <input type="number" name="num1" required><br><br>
+
+        <label>Second Number:</label>
+        <input type="number" name="num2" required><br><br>
+
+        <label>Enter String:</label>
+        <input type="text" name="text" required><br><br>
+
+        <button type="submit">Submit</button>
+
+    </form>
+
+    {% if hcf %}
+
+    <h2>Results</h2>
+
+    <p>HCF: {{ hcf }}</p>
+    <p>LCM: {{ lcm }}</p>
+
+    <p>Reversed String: {{ reversed_string }}</p>
+
+    <h3>Factorials from 4 to 8</h3>
+
+    <ul>
+        {% for key, value in factorials.items() %}
+            <li>{{ key }}! = {{ value }}</li>
+        {% endfor %}
+    </ul>
+
+    {% endif %}
+
+</body>
+</html>
