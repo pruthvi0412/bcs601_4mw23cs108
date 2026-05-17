@@ -1,23 +1,28 @@
-# BCS601 Cloud Project
+# Expense Tracker Cloud Project
 
 ## Student Details
-Name: Your Name
-USN: 4MWCS001
+Name: Pruthvi Shetty
+USN: 4MW23CS108
 
 ## Project Description
-This project is developed using Python Flask and deployed on Render cloud platform.
+This project is an Expense Tracker web application developed using Python Flask and deployed on Render cloud platform.
 
 ## Features
-- Finds HCF and LCM
-- Reverses string
-- Displays factorials from 4 to 8
+- Add expenses
+- View expense list
+- Calculate total expenses
+- Cloud deployment
 
 ## Technologies Used
 - Python
 - Flask
 - HTML
+- CSS
 - GitHub
-- Render Cloud
+- Render
 
 ## Deployment URL
 https://bcs601-4mw23cs108.onrender.com
+
+## GitHub Repository
+https://github.com/pruthvi0412/bcs601_4mw23cs108

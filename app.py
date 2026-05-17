@@ -1,32 +1,28 @@
 from flask import Flask, render_template, request
-import math
 
 app = Flask(__name__)
 
+expenses = []
+
 @app.route('/', methods=['GET', 'POST'])
 def home():
-    hcf = lcm = reversed_string = None
-    factorials = {}
+    total = 0
 
     if request.method == 'POST':
-        num1 = int(request.form['num1'])
-        num2 = int(request.form['num2'])
-        text = request.form['text']
+        title = request.form['title']
+        amount = float(request.form['amount'])
 
-        hcf = math.gcd(num1, num2)
-        lcm = (num1 * num2) // hcf
+        expenses.append({
+            'title': title,
+            'amount': amount
+        })
 
-        reversed_string = text[::-1]
-
-        for i in range(4, 9):
-            factorials[i] = math.factorial(i)
+    total = sum(item['amount'] for item in expenses)
 
     return render_template(
         'index.html',
-        hcf=hcf,
-        lcm=lcm,
-        reversed_string=reversed_string,
-        factorials=factorials
+        expenses=expenses,
+        total=total
     )
 
 if __name__ == '__main__':
