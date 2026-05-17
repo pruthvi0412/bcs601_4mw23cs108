@@ -18,3 +18,6 @@ This project is developed using Python Flask and deployed on Render cloud platfo
 - HTML
 - GitHub
 - Render Cloud
+
+## Deployment URL
+https://bcs601-4mw23cs108.onrender.com
